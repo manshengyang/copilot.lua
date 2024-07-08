@@ -86,11 +86,6 @@ local function is_ft_disabled(ft, filetypes)
       string.format("'filetype' %s rejected by config filetypes[%s]", ft, "*")
   end
 
-  if internal_filetypes[short_ft] ~= nil then
-    return not internal_filetypes[short_ft],
-      string.format("'filetype' %s rejected by internal_filetypes[%s]", ft, short_ft)
-  end
-
   return false
 end
 
